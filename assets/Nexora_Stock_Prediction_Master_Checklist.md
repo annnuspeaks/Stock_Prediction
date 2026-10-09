@@ -1240,22 +1240,22 @@ A feature is **DONE** only when:
 
 > **Do this before serious ML development.**
 
--   [ ] Create `stock-prediction/`.
--   [ ] Create `assets/`.
--   [ ] Put this Master Checklist inside `assets/`.
--   [ ] Initialize Git.
--   [ ] Create GitHub repository.
--   [ ] Connect local repository to GitHub.
--   [ ] Create `.gitignore`.
+-   [x] Create `stock-prediction/`.
+-   [x] Create `assets/`.
+-   [x] Put this Master Checklist inside `assets/`.
+-   [x] Initialize Git.
+-   [x] Create GitHub repository.
+-   [x] Connect local repository to GitHub.
+-   [x] Create `.gitignore`.
 -   [ ] Create `.env.example`.
--   [ ] Create root `README.md`.
+-   [x] Create root `README.md`.
 -   [ ] Create `frontend/`.
 -   [ ] Create `backend/`.
 -   [ ] Create `ml/`.
 -   [ ] Create `docs/`.
--   [ ] Create initial CI workflow.
--   [ ] Run CI successfully.
--   [ ] Make first clean commit.
+-   [x] Create initial CI workflow.
+-   [x] Run CI successfully.
+-   [x] Make first clean commit.
 -   [ ] Push to GitHub.
 -   [ ] Verify repository structure.
 -   [ ] Begin Phase 1.
