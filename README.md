@@ -160,7 +160,7 @@ The exact market-data provider, model configuration, prediction horizon, and oth
 
 The following diagram illustrates the complete high-level workflow of Nexora, from application startup and user input through market-data retrieval, processing, prediction, risk assessment, recommendation generation, and final result presentation.
 
-![Nexora Overall Workflow](assets/diagrams/Nexora_Overall_Workflow.jpg)
+![Nexora Overall Workflow](assets/diagrams/Nexora_Overall_Workflow.jpeg)
 
 ## System Architecture
 
