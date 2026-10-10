@@ -32,58 +32,58 @@
 
 ## 0.1 Project Definition
 
--   [ ] Finalize title: **Nexora --- AI Stock Decision Support &
+-   [x] Finalize title: **Nexora --- AI Stock Decision Support &
     Prediction Tool**
--   [ ] Finalize one-sentence description.
--   [ ] Finalize problem statement.
--   [ ] Finalize aim.
--   [ ] Finalize objectives.
--   [ ] Define target users.
--   [ ] Define scope and limitations.
--   [ ] Define initial supported market/region.
--   [ ] Define prediction horizon(s).
--   [ ] Define outputs: BUY / SELL / WATCH / HOLD / NO SIGNAL.
+-   [x] Finalize one-sentence description.
+-   [x] Finalize problem statement.
+-   [x] Finalize aim.
+-   [x] Finalize objectives.
+-   [x] Define target users.
+-   [x] Define scope and limitations.
+-   [x] Define initial supported market/region.
+-   [x] Define prediction horizon(s).
+-   [x] Define outputs: BUY / SELL / WATCH / HOLD / NO SIGNAL.
 
 ## 0.2 Agile Setup
 
--   [ ] Create product backlog.
--   [ ] Define epics.
--   [ ] Break epics into user stories/tasks.
--   [ ] Define Definition of Done.
--   [ ] Define sprint duration.
--   [ ] Define sprint planning.
--   [ ] Define sprint review/demo.
--   [ ] Define retrospective.
--   [ ] Maintain blockers/issues.
--   [ ] Record important scope changes.
+-   [x] Create product backlog.
+-   [x] Define epics.
+-   [x] Break epics into user stories/tasks.
+-   [x] Define Definition of Done.
+-   [x] Define sprint duration.
+-   [x] Define sprint planning.
+-   [x] Define sprint review/demo.
+-   [x] Define retrospective.
+-   [x] Maintain blockers/issues.
+-   [x] Record important scope changes.
 
 ### Suggested Agile Cycle
 
-1.  [ ] Sprint Planning
-2.  [ ] Development
-3.  [ ] Testing
-4.  [ ] Documentation
-5.  [ ] Review/Demo
-6.  [ ] Retrospective
-7.  [ ] Backlog Refinement
+1.  [x] Sprint Planning
+2.  [x] Development
+3.  [x] Testing
+4.  [x] Documentation
+5.  [x] Review/Demo
+6.  [x] Retrospective
+7.  [x] Backlog Refinement
 
 ## 0.3 Git Initialization
 
--   [ ] Create `stock-prediction/`.
--   [ ] Create `assets/`.
--   [ ] Place this Master Checklist in `assets/`.
--   [ ] Run `git init`.
--   [ ] Create GitHub repository.
--   [ ] Connect local repository to GitHub.
--   [ ] Create `main` branch.
--   [ ] Decide feature-branch strategy.
--   [ ] Create `.gitignore`.
--   [ ] Create `.env.example`.
--   [ ] Ensure `.env` is ignored.
--   [ ] Create initial folder structure.
--   [ ] Make first meaningful commit.
--   [ ] Push to GitHub.
--   [ ] Verify clean repository.
+-   [x] Create `stock-prediction/`.
+-   [x] Create `assets/`.
+-   [x] Place this Master Checklist in `assets/`.
+-   [x] Run `git init`.
+-   [x] Create GitHub repository.
+-   [x] Connect local repository to GitHub.
+-   [x] Create `main` branch.
+-   [x] Decide feature-branch strategy.
+-   [x] Create `.gitignore`.
+-   [x] Create `.env.example`.
+-   [x] Ensure `.env` is ignored.
+-   [x] Create initial folder structure.
+-   [x] Make first meaningful commit.
+-   [x] Push to GitHub.
+-   [x] Verify clean repository.
 
 ## 0.4 CI/CD Foundation
 
@@ -92,29 +92,29 @@
 
 ### CI Concepts
 
--   [ ] Understand Continuous Integration.
--   [ ] Understand Continuous Delivery/Deployment.
--   [ ] Understand pipeline.
--   [ ] Understand build.
--   [ ] Understand automated tests.
--   [ ] Understand artifacts.
--   [ ] Understand environments.
--   [ ] Understand deployment.
--   [ ] Understand rollback.
+-   [x] Understand Continuous Integration.
+-   [x] Understand Continuous Delivery/Deployment.
+-   [x] Understand pipeline.
+-   [x] Understand build.
+-   [x] Understand automated tests.
+-   [x] Understand artifacts.
+-   [x] Understand environments.
+-   [x] Understand deployment.
+-   [x] Understand rollback.
 
 ### Initial CI
 
--   [ ] Select CI platform.
--   [ ] Prefer GitHub Actions initially unless another tool is required.
--   [ ] Create workflow.
--   [ ] Run workflow on push.
+-   [x] Select CI platform.
+-   [x] Prefer GitHub Actions initially unless another tool is required.
+-   [x] Create workflow.
+-   [x] Run workflow on push.
 -   [ ] Run workflow on pull request.
 -   [ ] Install frontend dependencies.
 -   [ ] Install backend dependencies.
 -   [ ] Run frontend checks.
 -   [ ] Run backend checks.
 -   [ ] Run automated tests.
--   [ ] Verify successful pipeline.
+-   [x] Verify successful pipeline.
 -   [ ] Intentionally test a failing pipeline.
 -   [ ] Fix and rerun.
 -   [ ] Document the pipeline.
@@ -1247,18 +1247,18 @@ A feature is **DONE** only when:
 -   [x] Create GitHub repository.
 -   [x] Connect local repository to GitHub.
 -   [x] Create `.gitignore`.
--   [ ] Create `.env.example`.
+-   [x] Create `.env.example`.
 -   [x] Create root `README.md`.
--   [ ] Create `frontend/`.
--   [ ] Create `backend/`.
--   [ ] Create `ml/`.
--   [ ] Create `docs/`.
+-   [x] Create `frontend/`.
+-   [x] Create `backend/`.
+-   [x] Create `ml/`.
+-   [x] Create `docs/`.
 -   [x] Create initial CI workflow.
 -   [x] Run CI successfully.
 -   [x] Make first clean commit.
--   [ ] Push to GitHub.
--   [ ] Verify repository structure.
--   [ ] Begin Phase 1.
+-   [x] Push to GitHub.
+-   [x] Verify repository structure.
+-   [x] Begin Phase 1.
 
 ------------------------------------------------------------------------
 
