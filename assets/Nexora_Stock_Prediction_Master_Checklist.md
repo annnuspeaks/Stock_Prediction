@@ -110,8 +110,8 @@
 -   [x] Run workflow on push.
 -   [x] Run workflow on pull request.
 -   [x] Install frontend dependencies.
--   [ ] Install backend dependencies.
--   [ ] Run frontend checks.
+-   [x] Install backend dependencies.
+-   [x] Run frontend checks.
 -   [ ] Run backend checks.
 -   [ ] Run automated tests.
 -   [x] Verify successful pipeline.
@@ -260,7 +260,7 @@ Define and document:
 
 ### ML/Data
 
--   [ ] Python environment.
+-   [x] Python environment.
 -   [ ] Data-processing libraries.
 -   [ ] ML libraries.
 -   [ ] Model storage/versioning.
