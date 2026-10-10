@@ -35,6 +35,12 @@ jobs:
         run: npm ci
         working-directory: frontend
 
+      - name: Run frontend checks
+        run: |
+          npm run lint
+          npm run build
+        working-directory: frontend
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -46,5 +52,17 @@ jobs:
           pip install -r requirements.txt
         working-directory: backend
 
+      - name: Run backend checks
+        run: python -m compileall app
+        working-directory: backend
+        env:
+          PYTHONPATH: .
+
+      - name: Run automated tests
+        run: pytest
+        working-directory: backend
+        env:
+          PYTHONPATH: .
+
       - name: CI success
-        run: echo "Nexora CI foundation and dependency installation passed successfully."
+        run: echo "Nexora CI checks passed successfully."
