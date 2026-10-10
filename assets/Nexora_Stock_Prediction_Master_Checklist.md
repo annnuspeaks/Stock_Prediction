@@ -108,8 +108,8 @@
 -   [x] Prefer GitHub Actions initially unless another tool is required.
 -   [x] Create workflow.
 -   [x] Run workflow on push.
--   [ ] Run workflow on pull request.
--   [ ] Install frontend dependencies.
+-   [x] Run workflow on pull request.
+-   [x] Install frontend dependencies.
 -   [ ] Install backend dependencies.
 -   [ ] Run frontend checks.
 -   [ ] Run backend checks.
@@ -241,22 +241,22 @@ Define and document:
 
 ### Frontend
 
--   [ ] Framework/library.
--   [ ] Build tool.
--   [ ] Routing.
--   [ ] State management.
--   [ ] Charting library.
--   [ ] UI/icon system.
--   [ ] Styling strategy.
+-   [x] Framework/library.
+-   [x] Build tool.
+-   [x] Routing.
+-   [x] State management.
+-   [x] Charting library.
+-   [x] UI/icon system.
+-   [x] Styling strategy.
 
 ### Backend
 
--   [ ] Language.
--   [ ] API framework.
--   [ ] Validation.
--   [ ] API documentation.
--   [ ] Logging.
--   [ ] Configuration management.
+-   [x] Language.
+-   [x] API framework.
+-   [x] Validation.
+-   [x] API documentation.
+-   [x] Logging.
+-   [x] Configuration management.
 
 ### ML/Data
 
