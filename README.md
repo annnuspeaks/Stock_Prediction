@@ -160,7 +160,7 @@ The exact market-data provider, model configuration, prediction horizon, and oth
 
 The following diagram illustrates the complete high-level workflow of Nexora, from application startup and user input through market-data retrieval, processing, prediction, risk assessment, recommendation generation, and final result presentation.
 
-![Nexora Overall Workflow](assets/diagrams/Nexora_Overall_Workflow.jpeg)
+![Nexora Overall Workflow](assets/diagrams/Nexora_Overall_Workflow.jpg)
 
 ## System Architecture
 
@@ -338,21 +338,63 @@ Nexora follows a CI/CD-oriented development workflow from the beginning.
 
 ### Current CI
 
-GitHub Actions is configured for the initial project-foundation checks.
+Nexora uses **GitHub Actions** for continuous integration. The pipeline runs automatically on:
+
+- Pushes to `main`
+- Pull requests targeting `main`
+
+The current CI pipeline performs the following checks:
 
 ```text
 Code Change
     ↓
-Git Push / Pull Request
+Push / Pull Request
     ↓
 GitHub Actions
     ↓
-Automated Checks
+Verify Project Structure
+    ↓
+Setup Node.js
+    ↓
+Install Frontend Dependencies
+    ↓
+Frontend Checks
+  ├── ESLint
+  └── Production Build
+    ↓
+Setup Python
+    ↓
+Install Backend Dependencies
+    ↓
+Backend Checks
+  └── Python Compilation
+    ↓
+Automated Tests
+  └── Pytest
     ↓
 PASS / FAIL
 ```
 
-The CI pipeline will progressively expand as frontend, backend, ML, and automated tests are introduced.
+### CI Checks
+
+| Area | Check |
+|---|---|
+| Project | Required project files exist |
+| Frontend | Dependencies install successfully |
+| Frontend | ESLint passes |
+| Frontend | Production build succeeds |
+| Backend | Dependencies install successfully |
+| Backend | Python application compiles |
+| Backend | Automated tests pass |
+
+The pipeline is intentionally kept lightweight at the project-foundation stage and will expand as additional application, ML, integration, security, and deployment checks are introduced.
+
+### Failure Handling
+
+If any required CI check fails, GitHub Actions marks the workflow as failed and prevents the pipeline from reaching the final success step.
+
+The pipeline was also intentionally tested with a controlled failure to verify that failures are correctly detected. The intentional failure was subsequently removed and the pipeline was rerun successfully.
+
 
 ### Future CD
 

@@ -115,8 +115,8 @@
 -   [x] Run backend checks.
 -   [x] Run automated tests.
 -   [x] Verify successful pipeline.
--   [ ] Intentionally test a failing pipeline.
--   [ ] Fix and rerun.
+-   [x] Intentionally test a failing pipeline.
+-   [x] Fix and rerun.
 -   [ ] Document the pipeline.
 
 ### CD Foundation
