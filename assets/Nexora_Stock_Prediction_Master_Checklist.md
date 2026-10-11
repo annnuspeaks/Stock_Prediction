@@ -112,8 +112,8 @@
 -   [x] Install frontend dependencies.
 -   [x] Install backend dependencies.
 -   [x] Run frontend checks.
--   [ ] Run backend checks.
--   [ ] Run automated tests.
+-   [x] Run backend checks.
+-   [x] Run automated tests.
 -   [x] Verify successful pipeline.
 -   [ ] Intentionally test a failing pipeline.
 -   [ ] Fix and rerun.

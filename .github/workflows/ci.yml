@@ -64,5 +64,8 @@ jobs:
         env:
           PYTHONPATH: .
 
+      - name: Intentional failure test
+        run: exit 1
+
       - name: CI success
         run: echo "Nexora CI checks passed successfully."
