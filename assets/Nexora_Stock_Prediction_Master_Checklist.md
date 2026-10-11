@@ -1,9 +1,13 @@
+<p align="center">
+  <img src="Nexora’s_Stock_Prediction_Tool.png" alt="Nexora Stock Prediction Tool" width="700">
+</p>
+
 # Nexora --- AI Stock Decision Support & Prediction Tool
 
 ## Master Project Checklist
 
 > **Brand:** Nexora\
-> **Repository:** `stock-prediction/`\
+> **Repository:** `nexora_stock_prediction/`\
 > **Methodology:** Agile SDLC\
 > **Goal:** Build a reliable, explainable and risk-aware tool that
 > analyzes a selected stock and provides decision support such as **BUY,
@@ -69,7 +73,7 @@
 
 ## 0.3 Git Initialization
 
--   [x] Create `stock-prediction/`.
+-   [x] Create `nexora_stock_prediction/`.
 -   [x] Create `assets/`.
 -   [x] Place this Master Checklist in `assets/`.
 -   [x] Run `git init`.
@@ -278,11 +282,15 @@ Define and document:
 Target a clean structure similar to:
 
 ``` text
-stock-prediction/
+nexora_stock_prediction/
 ├── README.md
 ├── .gitignore
 ├── .env.example
 ├── LICENSE
+├── assets/
+│   ├── diagrams/
+│   ├── project documentation
+│   └── master checklist
 ├── frontend/
 │   ├── README.md
 │   └── src/
@@ -290,10 +298,6 @@ stock-prediction/
 │   ├── README.md
 │   └── app/
 ├── ml/
-│   ├── data/
-│   ├── notebooks/
-│   ├── models/
-│   ├── pipelines/
 │   └── README.md
 ├── tests/
 ├── docs/
@@ -1240,7 +1244,7 @@ A feature is **DONE** only when:
 
 > **Do this before serious ML development.**
 
--   [x] Create `stock-prediction/`.
+-   [x] Create `nexora_stock_prediction/`.
 -   [x] Create `assets/`.
 -   [x] Put this Master Checklist inside `assets/`.
 -   [x] Initialize Git.

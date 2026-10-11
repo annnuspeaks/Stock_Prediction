@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/Nexora’s_Stock_Prediction_Tool.png" alt="Nexora Stock Prediction Tool" width="700">
+</p>
+
 # Nexora --- AI Stock Decision Support & Prediction Tool
 
 > Analyze market information. Understand risk. Make informed decisions.
@@ -139,8 +143,11 @@ nexora_stock_prediction/
 │
 ├── assets/
 │   ├── diagrams/
+│   ├── Nexora’s_Stock_Prediction_Tool.png
 │   ├── 0.1_Definitions.md
 │   ├── 0.2_Agile_Setup.md
+│   ├── 0.3_Git_Initialization.md
+│   ├── 0.4_CI_CD_Foundation.md
 │   ├── 1.1_Business_Requirements.md
 │   ├── 1.2_Functional_Requirements.md
 │   ├── 1.3_Non_Functional_Requirements.md
@@ -370,9 +377,17 @@ removed and the pipeline was successfully rerun.
 
 ### Continuous Delivery / Deployment
 
-CD is intentionally deferred until the application has a stable
-deployable build and the deployment target, environments, configuration,
-deployment process, and rollback process have been defined.
+CD is **not implemented yet** and is intentionally deferred until the
+application has a stable deployable build and the deployment target,
+environments, configuration, deployment process, and rollback process
+have been defined.
+
+Current state:
+
+```text
+CI → Implemented
+CD → Deferred
+```
 
 ## Testing Overview
 
@@ -384,6 +399,8 @@ Current automated checks include:
 -   Frontend production build.
 -   Backend Python compilation.
 -   Backend automated tests with pytest.
+
+These checks currently run through the GitHub Actions CI pipeline.
 
 Planned/expanding testing areas include:
 
@@ -459,6 +476,24 @@ The initial project does not provide automatic trading. Any future
 real-world financial deployment or automated trading capability would
 require separate review of applicable legal, regulatory, compliance,
 security, and risk requirements.
+
+## Current Project Status
+
+| Area | Status |
+|---|---|
+| Project Repository | 🟢 Initialized |
+| Git | 🟢 Initialized |
+| GitHub | 🟢 Connected |
+| Master Checklist | 🟢 Added |
+| Initial CI | 🟢 Implemented |
+| Phase 1 Requirements | 🟢 Completed |
+| Root Documentation (1.5) | 🟢 Completed |
+| Frontend Foundation | 🟢 Initialized |
+| Backend Foundation | 🟢 Initialized |
+| ML Python Environment | 🟢 Initialized |
+| Architecture (2.1) | 🟡 In Progress |
+| ML/Data Libraries | ⬜ To Be Decided |
+| Deployment/CD | ⬜ Deferred |
 
 ## License
 

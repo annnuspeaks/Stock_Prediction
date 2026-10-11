@@ -1,75 +1,79 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="../assets/Nexora’s_Stock_Prediction_Tool.png" alt="Nexora Stock Prediction Tool" width="700">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Nexora Frontend
 
-Currently, two official plugins are available:
+The frontend is the user-facing application for **Nexora --- AI Stock
+Decision Support & Prediction Tool**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technology Stack
 
-## React Compiler
+- **Framework/library:** React + TypeScript
+- **Build tool:** Vite
+- **Routing:** React Router
+- **State management:** React Context + hooks initially
+- **Charting:** Recharts
+- **UI/icons:** Lucide React + custom Nexora UI components
+- **Styling:** CSS Modules + global CSS/design tokens
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Current Foundation
 
-## Expanding the ESLint configuration
+The frontend has been initialized as a Vite React + TypeScript application.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Current quality checks:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+npm run lint
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+These checks are also executed by the GitHub Actions CI workflow.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+From the repository root:
 
+```bash
+cd frontend
+npm install
+npm run dev
 ```
+
+The Vite development server provides the local frontend development environment.
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## Lint
+
+```bash
+npm run lint
+```
+
+## Documentation Scope
+
+As frontend implementation progresses, this document will be expanded to
+cover:
+
+- Application structure
+- Routes
+- Components
+- API communication
+- UI/UX conventions
+- State management
+- Charts and visualizations
+- Testing
+- Build and deployment considerations
+
+The root `README.md` and Master Checklist remain the project-level sources
+of truth for overall project status and scope.
+
+## Document Status
+
+**Component:** Frontend  
+**Project:** Nexora --- AI Stock Decision Support & Prediction Tool  
+**Status:** Foundation initialized
