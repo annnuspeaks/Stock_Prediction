@@ -230,16 +230,16 @@ Create/update root `README.md` with:
 
 Define and document:
 
--   [ ] User.
--   [ ] Frontend.
--   [ ] Backend/API.
--   [ ] Market-data provider.
--   [ ] Data-processing layer.
--   [ ] ML prediction layer.
--   [ ] Decision/risk layer.
--   [ ] Database/storage if required.
--   [ ] Logging/monitoring.
--   [ ] CI/CD pipeline.
+-   [x] User.
+-   [x] Frontend.
+-   [x] Backend/API.
+-   [x] Market-data provider.
+-   [x] Data-processing layer.
+-   [x] ML prediction layer.
+-   [x] Decision/risk layer.
+-   [x] Database/storage if required.
+-   [x] Logging/monitoring.
+-   [x] CI/CD pipeline.
 
 ## 2.2 Technology Stack
 
@@ -305,45 +305,45 @@ nexora_stock_prediction/
     └── workflows/
 ```
 
--   [ ] Finalize actual structure.
--   [ ] Avoid unnecessary duplication.
--   [ ] Keep generated files out of Git unless intentionally required.
+-   [x] Finalize actual structure.
+-   [x] Avoid unnecessary duplication.
+-   [x] Keep generated files out of Git unless intentionally required.
 
 ## 2.4 Documentation Subphase --- Frontend
 
 Create `frontend/README.md`:
 
--   [ ] Purpose.
--   [ ] Technology stack.
--   [ ] Setup.
--   [ ] Environment variables.
--   [ ] Run commands.
--   [ ] Build commands.
--   [ ] Test commands.
--   [ ] Folder structure.
--   [ ] Routes.
--   [ ] Major components.
--   [ ] API integration.
--   [ ] UI/UX conventions.
--   [ ] Nexora branding.
+-   [x] Purpose.
+-   [x] Technology stack.
+-   [x] Setup.
+-   [x] Environment variables.
+-   [x] Run commands.
+-   [x] Build commands.
+-   [x] Test commands.
+-   [x] Folder structure.
+-   [x] Routes.
+-   [x] Major components.
+-   [x] API integration.
+-   [x] UI/UX conventions.
+-   [x] Nexora branding.
 
 ## 2.5 Documentation Subphase --- Backend
 
 Create `backend/README.md`:
 
--   [ ] Purpose.
--   [ ] Technology stack.
--   [ ] Setup.
--   [ ] Environment variables.
--   [ ] Run commands.
--   [ ] API overview.
--   [ ] Endpoint list.
--   [ ] Request/response examples.
--   [ ] Error handling.
--   [ ] Logging.
--   [ ] Testing.
--   [ ] Model integration.
--   [ ] Security.
+-   [x] Purpose.
+-   [x] Technology stack.
+-   [x] Setup.
+-   [x] Environment variables.
+-   [x] Run commands.
+-   [x] API overview.
+-   [x] Endpoint list.
+-   [x] Request/response examples.
+-   [x] Error handling.
+-   [x] Logging.
+-   [x] Testing.
+-   [x] Model integration.
+-   [x] Security.
 
 ------------------------------------------------------------------------
 
