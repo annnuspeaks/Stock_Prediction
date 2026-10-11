@@ -117,7 +117,7 @@
 -   [x] Verify successful pipeline.
 -   [x] Intentionally test a failing pipeline.
 -   [x] Fix and rerun.
--   [ ] Document the pipeline.
+-   [x] Document the pipeline.
 
 ### CD Foundation
 
@@ -143,77 +143,77 @@
 
 ## 1.1 Business Requirements
 
--   [ ] Define the business problem.
--   [ ] Define why the tool is needed.
--   [ ] Define expected value.
--   [ ] Define primary use cases.
--   [ ] Define success criteria.
--   [ ] Define limitations.
--   [ ] Define financial-risk considerations.
+-   [x] Define the business problem.
+-   [x] Define why the tool is needed.
+-   [x] Define expected value.
+-   [x] Define primary use cases.
+-   [x] Define success criteria.
+-   [x] Define limitations.
+-   [x] Define financial-risk considerations.
 
 ## 1.2 Functional Requirements
 
--   [ ] Stock search.
--   [ ] Stock selection.
--   [ ] User preferences.
--   [ ] Time-horizon selection.
--   [ ] Risk preference if applicable.
--   [ ] Market-data retrieval.
--   [ ] Data validation.
--   [ ] Data processing.
--   [ ] Prediction.
--   [ ] Risk assessment.
--   [ ] Recommendation generation.
--   [ ] Recommendation explanation.
--   [ ] Result visualization.
--   [ ] Watchlist.
--   [ ] Prediction history.
--   [ ] Loading states.
--   [ ] Error states.
--   [ ] No-data/stale-data handling.
+-   [x] Stock search.
+-   [x] Stock selection.
+-   [x] User preferences.
+-   [x] Time-horizon selection.
+-   [x] Risk preference if applicable.
+-   [x] Market-data retrieval.
+-   [x] Data validation.
+-   [x] Data processing.
+-   [x] Prediction.
+-   [x] Risk assessment.
+-   [x] Recommendation generation.
+-   [x] Recommendation explanation.
+-   [x] Result visualization.
+-   [x] Watchlist.
+-   [x] Prediction history.
+-   [x] Loading states.
+-   [x] Error states.
+-   [x] No-data/stale-data handling.
 
 ## 1.3 Non-Functional Requirements
 
--   [ ] Performance.
--   [ ] Reliability.
--   [ ] Security.
--   [ ] Maintainability.
--   [ ] Scalability.
--   [ ] Usability.
--   [ ] Accessibility.
--   [ ] Responsiveness.
--   [ ] Logging/observability.
--   [ ] Reproducibility.
+-   [x] Performance.
+-   [x] Reliability.
+-   [x] Security.
+-   [x] Maintainability.
+-   [x] Scalability.
+-   [x] Usability.
+-   [x] Accessibility.
+-   [x] Responsiveness.
+-   [x] Logging/observability.
+-   [x] Reproducibility.
 
 ## 1.4 User Stories
 
--   [ ] User can search for a stock.
--   [ ] User can select a stock.
--   [ ] User can choose an analysis period.
--   [ ] User can request an analysis.
--   [ ] User can see the recommendation.
--   [ ] User can understand why it was generated.
--   [ ] User can see risk/confidence.
--   [ ] User can manage a watchlist.
--   [ ] User can review prediction history.
+-   [x] User can search for a stock.
+-   [x] User can select a stock.
+-   [x] User can choose an analysis period.
+-   [x] User can request an analysis.
+-   [x] User can see the recommendation.
+-   [x] User can understand why it was generated.
+-   [x] User can see risk/confidence.
+-   [x] User can manage a watchlist.
+-   [x] User can review prediction history.
 
 ## 1.5 Documentation Subphase --- Root
 
 Create/update root `README.md` with:
 
--   [ ] Nexora overview.
--   [ ] Aim/problem/objectives.
--   [ ] Features.
--   [ ] High-level architecture.
--   [ ] Repository structure.
--   [ ] Setup overview.
--   [ ] Frontend documentation link/section.
--   [ ] Backend documentation link/section.
--   [ ] ML/data documentation link/section.
--   [ ] Git workflow.
--   [ ] CI/CD overview.
--   [ ] Testing overview.
--   [ ] Disclaimer.
+-   [x] Nexora overview.
+-   [x] Aim/problem/objectives.
+-   [x] Features.
+-   [x] High-level architecture.
+-   [x] Repository structure.
+-   [x] Setup overview.
+-   [x] Frontend documentation link/section.
+-   [x] Backend documentation link/section.
+-   [x] ML/data documentation link/section.
+-   [x] Git workflow.
+-   [x] CI/CD overview.
+-   [x] Testing overview.
+-   [x] Disclaimer.
 
 > **Rule:** The root README is the project entry point and must point
 > readers to the dedicated frontend and backend documentation.

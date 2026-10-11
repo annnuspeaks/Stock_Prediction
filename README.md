@@ -1,249 +1,136 @@
-# Nexora — AI Stock Decision Support & Prediction Tool
+# Nexora --- AI Stock Decision Support & Prediction Tool
 
-> **Analyze market information. Understand risk. Make informed decisions.**
-
-Nexora is an AI-powered stock analysis and decision-support tool designed to help users understand a selected stock using market data, analytical processing, prediction models, and risk-aware decision logic.
-
-> **Disclaimer:** Nexora provides estimates and decision support. It does not guarantee returns or replace professional financial advice.
-
----
+> Analyze market information. Understand risk. Make informed decisions.
 
 ## Overview
 
-Nexora is being developed as a complete software product combining:
+Nexora is an AI-assisted stock decision-support and prediction platform
+designed to transform relevant market information into structured,
+understandable analytical results.
 
-- Market-data collection
-- Data validation and preparation
-- Market analysis
-- Machine-learning-based prediction
-- Risk assessment
-- Decision logic
-- Clear user-facing explanations
-- Watchlist and analysis capabilities
-- Automated software quality checks through CI/CD
+The initial scope focuses on the **Indian equity market ---
+NSE/BSE-listed stocks** and supports prediction horizons of **1 trading
+day** and **1 trading week**.
 
-The project follows an **Agile SDLC** approach and uses Git/GitHub from the beginning.
+Nexora combines market-data retrieval, validation, processing,
+prediction, risk assessment, and decision-support logic into one product
+workflow.
 
-The project is branded under **Nexora**.
+> **Important:** Nexora provides decision support and predictions. It
+> does not guarantee returns and is not a substitute for professional
+> financial advice.
 
----
+## Problem
 
-## Problem Statement
+Individual investors and other users can find it difficult to combine
+fragmented market information, analytical signals, predictive outputs,
+and risk considerations into one understandable view.
 
-Stock-market information is widely available, but interpreting large amounts of market data and converting it into a meaningful decision can be difficult for ordinary users.
-
-Nexora aims to provide a structured workflow in which a user can select a stock and receive understandable analysis containing relevant market information, prediction results, risk considerations, and a decision-support outcome.
-
-The system is not intended to promise a profitable trade. It is intended to help users make more informed decisions by presenting data-driven evidence and uncertainty clearly.
-
----
+Nexora addresses this by providing a structured workflow that turns
+relevant market information into a prediction, risk-aware
+recommendation, and explanation.
 
 ## Aim
 
-To design and develop **Nexora**, an AI-powered stock decision-support and prediction tool that analyzes market information, evaluates risk, generates predictions, and presents an understandable recommendation for a selected stock.
-
----
+The aim of Nexora is to build a maintainable AI-assisted platform that
+helps users analyze supported stocks and understand prediction-driven
+decision-support outcomes while clearly communicating uncertainty and
+risk.
 
 ## Objectives
 
-- Provide a simple interface for selecting and analyzing stocks.
-- Obtain suitable market data from a reliable data source.
-- Validate and prepare incoming data before analysis.
-- Identify meaningful market patterns and indicators.
-- Develop and evaluate suitable prediction models.
-- Assess prediction confidence and relevant risks.
-- Generate decision-support outcomes such as **BUY, SELL, WATCH, HOLD, or NO SIGNAL**, where appropriate.
-- Explain the major factors behind the generated result.
-- Maintain historical analysis/prediction information where required.
-- Provide a watchlist capability.
-- Build maintainable frontend, backend, and ML components.
-- Establish automated testing and CI/CD from the beginning.
-- Maintain proper documentation throughout development.
+-   Provide a structured stock-analysis workflow.
+-   Retrieve and validate relevant market data.
+-   Process data consistently for prediction.
+-   Generate predictions for supported horizons.
+-   Assess relevant risk and confidence.
+-   Generate transparent decision-support outcomes.
+-   Explain why a recommendation was generated.
+-   Handle insufficient, stale, or unreliable data safely.
+-   Provide a maintainable foundation for additional ML models and
+    capabilities.
+-   Apply software-engineering practices including Git, CI, testing,
+    documentation, and incremental Agile development.
 
----
+## Features
 
-## Key Features
+### Core Analysis
 
-### Stock Analysis
+-   Stock search and selection.
+-   1-day and 1-week analysis/prediction horizons.
+-   Market-data retrieval and validation.
+-   Data processing and feature preparation.
+-   Machine-learning prediction.
+-   Risk assessment.
+-   Confidence information where supported.
+-   Decision-support outcomes:
+    -   **BUY**
+    -   **SELL**
+    -   **WATCH**
+    -   **HOLD**
+    -   **NO SIGNAL**
+-   Recommendation explanation.
+-   Result visualization.
+-   Loading, error, no-data, and stale-data handling.
 
-- Search/select a stock.
-- Retrieve relevant market information.
-- Analyze available historical/current information.
-- Present important market indicators and trends.
+### User Features
 
-### Prediction
+-   Lightweight analysis preferences.
+-   Optional risk preference where supported.
+-   Watchlist.
+-   Prediction history.
 
-- Process market information through the prediction pipeline.
-- Generate a prediction for the defined prediction horizon.
-- Provide confidence/probability information where supported.
-- Clearly communicate uncertainty.
+## High-Level Architecture
 
-### Decision Support
-
-Depending on the available evidence and defined decision rules, Nexora may provide:
-
-- **BUY**
-- **SELL**
-- **WATCH**
-- **HOLD**
-- **NO SIGNAL**
-
-The decision-support result should consider prediction, risk, confidence, and data quality rather than relying only on a raw model output.
-
-### Risk Awareness
-
-- Identify relevant risk factors.
-- Consider market volatility and data quality.
-- Avoid presenting uncertain predictions as guarantees.
-- Use **NO SIGNAL** when available evidence is insufficient.
-
-### Watchlist
-
-- Add stocks to a watchlist.
-- Review selected stocks.
-- Support future monitoring/analysis capabilities.
-
-### Analysis History
-
-- Preserve relevant previous analysis results where required.
-- Allow users to review historical results.
-
-### Explainable Results
-
-Nexora should clearly distinguish between:
-
-1. Market information
-2. Model prediction
-3. Risk assessment
-4. System recommendation
-5. User's final decision
-
----
-
-## How Nexora Works
-
-```text
-User Opens Nexora
-        ↓
-Selects a Stock
-        ↓
-Provides Analysis Preferences
-        ↓
-Market Data is Retrieved
-        ↓
-Data is Validated
-        ↓
-Data is Prepared and Processed
-        ↓
-Relevant Features are Generated
-        ↓
-Prediction Model Runs
-        ↓
-Prediction & Confidence are Evaluated
-        ↓
-Risk is Assessed
-        ↓
-Decision Logic Generates an Outcome
-        ↓
-Result and Explanation are Presented
-        ↓
-User Reviews the Decision Support
-        ↓
-End
+``` text
+                    ┌─────────────────────┐
+                    │        User         │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Frontend       │
+                    │ React + TypeScript  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Backend / API    │
+                    │       FastAPI       │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+      Market Data        Data Processing    Decision / Risk
+       Provider             & Validation        Layer
+             │                 │                 │
+             └─────────────────┼─────────────────┘
+                               ▼
+                    ┌─────────────────────┐
+                    │   ML Prediction     │
+                    │      Layer          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Prediction + Risk +  │
+                    │ Recommendation +     │
+                    │ Explanation          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Frontend Result UI  │
+                    └─────────────────────┘
 ```
 
-The exact market-data provider, model configuration, prediction horizon, and other implementation decisions will be finalized during the relevant project phases.
+The architecture is intentionally modular so that additional models,
+data providers, storage, and deployment capabilities can be introduced
+as the project evolves.
 
----
+## Repository Structure
 
-### Overall Workflow
-
-The following diagram illustrates the complete high-level workflow of Nexora, from application startup and user input through market-data retrieval, processing, prediction, risk assessment, recommendation generation, and final result presentation.
-
-![Nexora Overall Workflow](assets/diagrams/Nexora_Overall_Workflow.jpg)
-
-## System Architecture
-
-High-level architecture:
-
-```text
-                         ┌─────────────────────┐
-                         │        User         │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │      Frontend       │
-                         │   User Interface    │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │       Backend       │
-                         │   Application/API   │
-                         └──────────┬──────────┘
-                                    │
-                 ┌──────────────────┼──────────────────┐
-                 │                  │                  │
-                 ▼                  ▼                  ▼
-        ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
-        │  Market Data   │ │ Data Processing│ │    Decision    │
-        │    Source      │ │  & Validation  │ │     Engine     │
-        └────────────────┘ └───────┬────────┘ └───────┬────────┘
-                                   │                  │
-                                   ▼                  │
-                           ┌────────────────┐         │
-                           │  ML Prediction │─────────┘
-                           │     Layer      │
-                           └───────┬────────┘
-                                   │
-                                   ▼
-                         ┌─────────────────────┐
-                         │ Prediction + Risk + │
-                         │ Decision Result     │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │   Frontend Result   │
-                         └─────────────────────┘
-```
-
-Detailed architecture and data-flow diagrams will be maintained in `docs/`.
-
----
-
-## Technology Stack
-
-Final technology choices will be confirmed during the architecture and implementation phases.
-
-### Frontend
-
-Responsible for the user interface, stock selection, user inputs, visualization, result presentation, watchlist, and history.
-
-See [`frontend/README.md`](frontend/README.md).
-
-### Backend
-
-Responsible for the application/API layer, data retrieval, validation, business/decision logic, ML communication, and backend services.
-
-See [`backend/README.md`](backend/README.md).
-
-### Machine Learning / Data
-
-Responsible for data preparation, exploratory analysis, feature engineering, model development, evaluation, and prediction.
-
-See [`ml/README.md`](ml/README.md).
-
-### Market Data
-
-A suitable freely available/free-tier market-data source will be evaluated and selected during the project. The final provider will be documented after its coverage, freshness, limits, reliability, and usage terms have been evaluated.
-
----
-
-## Project Structure
-
-```text
+``` text
 nexora_stock_prediction/
 │
 ├── .github/
@@ -251,12 +138,23 @@ nexora_stock_prediction/
 │       └── ci.yml
 │
 ├── assets/
+│   ├── diagrams/
+│   ├── 0.1_Definitions.md
+│   ├── 0.2_Agile_Setup.md
+│   ├── 1.1_Business_Requirements.md
+│   ├── 1.2_Functional_Requirements.md
+│   ├── 1.3_Non_Functional_Requirements.md
+│   ├── 1.4_User_Stories.md
+│   ├── 2.2_Technology_Stack.md
 │   └── Nexora_Stock_Prediction_Master_Checklist.md
 │
 ├── frontend/
 │   └── README.md
 │
 ├── backend/
+│   ├── app/
+│   ├── tests/
+│   ├── requirements.txt
 │   └── README.md
 │
 ├── ml/
@@ -264,176 +162,148 @@ nexora_stock_prediction/
 │
 ├── docs/
 ├── tests/
-│
 ├── .env.example
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
-The structure may evolve as implementation progresses, but changes should remain deliberate and documented.
+The structure may evolve as implementation progresses. Changes should
+remain deliberate and documented.
 
----
-
-## Getting Started
+## Setup Overview
 
 ### Prerequisites
 
-The exact prerequisites will be finalized with the selected technology stack. At the project-foundation stage, the repository requires Git, GitHub access, and a suitable development environment such as VS Code.
+-   Git
+-   GitHub access
+-   Node.js and npm for the frontend
+-   Python for backend and ML development
+-   A suitable development environment such as VS Code
 
-### Clone the Repository
+### Clone
 
-```bash
+``` bash
 git clone https://github.com/annnuspeaks/Stock_Prediction.git
 cd Stock_Prediction
 ```
 
+### Frontend
+
+``` bash
+cd frontend
+npm install
+npm run dev
+```
+
+Production build:
+
+``` bash
+npm run build
+```
+
+Lint:
+
+``` bash
+npm run lint
+```
+
+### Backend
+
+``` bat
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+The backend application is run from the `backend` directory with:
+
+``` bash
+uvicorn app.main:app --reload
+```
+
+### ML Environment
+
+The ML workspace uses a separate Python environment:
+
+``` text
+ml/.venv
+```
+
+The Jupyter kernel is configured as:
+
+``` text
+Nexora ML
+```
+
+ML/data-processing and model dependencies will be added as the
+corresponding ML phases are implemented.
+
 ### Configuration
 
-Environment-specific configuration will be maintained through environment variables. A template is provided in:
+Environment-specific configuration should use environment variables. The
+repository provides:
 
-```text
+``` text
 .env.example
 ```
 
-Actual secrets must never be committed to the repository.
+Actual secrets must never be committed to Git.
 
-Frontend, backend, and ML setup instructions will be maintained in their respective README files.
+## Frontend Documentation
 
----
+The frontend contains the user-facing Nexora application.
 
-## Frontend
+See:
 
-The frontend contains the user-facing part of Nexora.
+`frontend/README.md`
 
-**[Frontend README](frontend/README.md)**
+The dedicated frontend documentation will cover setup, development,
+build, project structure, routes, components, API communication, UI
+conventions, and testing.
 
-It will cover setup, development commands, project structure, routes, components, API communication, UI/UX conventions, testing, and build processes.
+## Backend Documentation
 
----
+The backend provides the application/API layer and coordinates
+validation, processing, prediction, risk, and decision-support services.
 
-## Backend
+See:
 
-The backend provides the application's service/API layer and coordinates data processing, prediction, and decision-support operations.
+`backend/README.md`
 
-**[Backend README](backend/README.md)**
+The dedicated backend documentation will cover setup, configuration, API
+endpoints, services, validation, error handling, ML integration,
+testing, and deployment.
 
-It will cover setup, configuration, API endpoints, services, validation, error handling, ML integration, testing, and deployment.
+## ML / Data Documentation
 
----
+The ML/data layer is responsible for data preparation, exploration,
+feature engineering, model development, evaluation, and prediction
+artifacts.
 
-## Machine Learning
+See:
 
-The ML component transforms prepared market information into evaluated prediction models and prediction outputs.
+`ml/README.md`
 
-**[ML README](ml/README.md)**
-
-It will cover datasets, preparation, exploratory analysis, features, target definition, model development, validation, evaluation, model selection, limitations, and model versioning.
-
----
-
-## CI/CD
-
-Nexora follows a CI/CD-oriented development workflow from the beginning.
-
-### Current CI
-
-Nexora uses **GitHub Actions** for continuous integration. The pipeline runs automatically on:
-
-- Pushes to `main`
-- Pull requests targeting `main`
-
-The current CI pipeline performs the following checks:
-
-```text
-Code Change
-    ↓
-Push / Pull Request
-    ↓
-GitHub Actions
-    ↓
-Verify Project Structure
-    ↓
-Setup Node.js
-    ↓
-Install Frontend Dependencies
-    ↓
-Frontend Checks
-  ├── ESLint
-  └── Production Build
-    ↓
-Setup Python
-    ↓
-Install Backend Dependencies
-    ↓
-Backend Checks
-  └── Python Compilation
-    ↓
-Automated Tests
-  └── Pytest
-    ↓
-PASS / FAIL
-```
-
-### CI Checks
-
-| Area | Check |
-|---|---|
-| Project | Required project files exist |
-| Frontend | Dependencies install successfully |
-| Frontend | ESLint passes |
-| Frontend | Production build succeeds |
-| Backend | Dependencies install successfully |
-| Backend | Python application compiles |
-| Backend | Automated tests pass |
-
-The pipeline is intentionally kept lightweight at the project-foundation stage and will expand as additional application, ML, integration, security, and deployment checks are introduced.
-
-### Failure Handling
-
-If any required CI check fails, GitHub Actions marks the workflow as failed and prevents the pipeline from reaching the final success step.
-
-The pipeline was also intentionally tested with a controlled failure to verify that failures are correctly detected. The intentional failure was subsequently removed and the pipeline was rerun successfully.
-
-
-### Future CD
-
-Automated deployment will be introduced after the application has a deployable environment and a stable build process. The deployment strategy will be documented before production deployment is automated.
-
----
-
-## Development Methodology
-
-Nexora follows the **Agile SDLC**.
-
-Development will be performed incrementally through:
-
-1. Sprint Planning
-2. Development
-3. Testing
-4. Documentation
-5. Review/Demo
-6. Retrospective
-7. Backlog Refinement
-
-The master project checklist is maintained in:
-
-```text
-assets/Nexora_Stock_Prediction_Master_Checklist.md
-```
-
----
+Detailed ML documentation will be expanded as the model-development
+phases are implemented.
 
 ## Git Workflow
 
-The `main` branch represents the stable project state. Feature development should preferably follow:
+The `main` branch represents the stable project state.
 
-```text
+Preferred workflow:
+
+``` text
 main
   ↓
-Feature Branch
+Feature / Work
   ↓
 Development
+  ↓
+Test
   ↓
 Commit
   ↓
@@ -448,106 +318,154 @@ Review
 Merge
 ```
 
-Use meaningful commits rather than large, unrelated commits.
+Use meaningful commits and keep changes focused. The Master Checklist
+remains the project source of truth:
 
----
+``` text
+assets/Nexora_Stock_Prediction_Master_Checklist.md
+```
 
-## Testing
+## CI/CD Overview
 
-Testing will be introduced progressively throughout development.
+### Continuous Integration
 
-Planned areas include:
+Nexora uses **GitHub Actions**.
 
-- Unit testing
-- API testing
-- Integration testing
-- Frontend testing
-- Backend testing
-- ML/pipeline validation
-- End-to-end testing
-- Regression testing
-- Performance testing
-- Security checks
+The CI workflow runs on:
+
+-   Pushes to `main`
+-   Pull requests targeting `main`
+
+Current pipeline:
+
+``` text
+Code Change
+    ↓
+Push / Pull Request
+    ↓
+GitHub Actions
+    ↓
+Verify Project Structure
+    ↓
+Install Frontend Dependencies
+    ↓
+Frontend Checks
+  ├── ESLint
+  └── Production Build
+    ↓
+Install Backend Dependencies
+    ↓
+Backend Checks
+  └── Python Compilation
+    ↓
+Automated Tests
+  └── Pytest
+    ↓
+PASS / FAIL
+```
+
+The pipeline has also been intentionally tested with a controlled
+failure to verify that CI correctly detects failures. The failure was
+removed and the pipeline was successfully rerun.
+
+### Continuous Delivery / Deployment
+
+CD is intentionally deferred until the application has a stable
+deployable build and the deployment target, environments, configuration,
+deployment process, and rollback process have been defined.
+
+## Testing Overview
+
+Testing is performed incrementally throughout development.
+
+Current automated checks include:
+
+-   Frontend ESLint.
+-   Frontend production build.
+-   Backend Python compilation.
+-   Backend automated tests with pytest.
+
+Planned/expanding testing areas include:
+
+-   Unit testing.
+-   API testing.
+-   Integration testing.
+-   Frontend testing.
+-   Backend testing.
+-   ML/pipeline validation.
+-   End-to-end testing.
+-   Regression testing.
+-   Performance testing.
+-   Security checks.
 
 Tests should be integrated into CI wherever practical.
 
----
+## Development Methodology
 
-## Project Documentation
+Nexora follows an Agile SDLC with lightweight, practical iterations:
 
-Documentation is maintained throughout development rather than being treated as a separate development phase.
+``` text
+Planning
+   ↓
+Development
+   ↓
+Testing
+   ↓
+Documentation
+   ↓
+Review / Demo
+   ↓
+Retrospective
+   ↓
+Backlog Refinement
+```
 
-- **Root:** this `README.md`
-- **Frontend:** [`frontend/README.md`](frontend/README.md)
-- **Backend:** [`backend/README.md`](backend/README.md)
-- **ML:** [`ml/README.md`](ml/README.md)
-- **Detailed documentation:** `docs/`
-- **Project assets/checklists:** `assets/`
-
----
+The Master Checklist is the master backlog and source of truth for
+project progress.
 
 ## Limitations
 
-Nexora's output will depend on:
+Nexora's outputs depend on factors including:
 
-- Availability and quality of market data
-- Data freshness
-- Historical data coverage
-- Prediction-model performance
-- Market conditions
-- Feature quality
-- Model assumptions
-- Prediction horizon
-- Uncertainty in future market behavior
+-   Market-data availability and quality.
+-   Data freshness.
+-   Historical data coverage.
+-   Prediction-model performance.
+-   Feature quality.
+-   Model assumptions.
+-   Market conditions.
+-   Prediction horizon.
+-   Uncertainty in future market behavior.
 
-A model that performs well on historical data does not guarantee equivalent performance in future markets.
+A model that performs well on historical data does not guarantee
+equivalent performance in future markets.
 
-The system may intentionally return **NO SIGNAL** when available evidence does not meet defined quality or confidence requirements.
+The system may intentionally return **NO SIGNAL** when evidence does not
+meet defined data-quality, confidence, or risk requirements.
 
----
+## Disclaimer
 
-## Financial Disclaimer
+Nexora is a **software-based stock decision-support and prediction
+tool**.
 
-Nexora is a **software-based decision-support and prediction tool**.
+Its outputs are estimates generated from available data, analytical
+methods, and prediction models. They are **not guarantees of future
+stock performance, returns, or accuracy**.
 
-Its outputs are estimates generated from available data, analytical methods, and prediction models. They are **not guarantees of future stock performance or returns**.
+Nexora is not a substitute for professional financial advice. Users
+remain responsible for their own investment decisions.
 
-Users remain responsible for their own investment decisions. Nexora should not be represented as a substitute for professional financial advice.
-
-Before any real-world financial deployment or automated trading capability is introduced, applicable legal, regulatory, compliance, security, and risk requirements must be reviewed separately.
-
----
-
-## Current Project Status
-
-| Area | Status |
-|---|---|
-| Project Repository | 🟢 Initialized |
-| Git | 🟢 Initialized |
-| GitHub | 🟢 Connected |
-| Master Checklist | 🟢 Added |
-| Initial CI | 🟢 Running |
-| Requirements | 🟡 In Progress |
-| Architecture | 🟡 In Progress |
-| Market Data Provider | ⬜ To Be Decided |
-| Backend | ⬜ Not Started |
-| Frontend | ⬜ Not Started |
-| ML Pipeline | ⬜ Not Started |
-| Testing | ⬜ Not Started |
-| Deployment/CD | ⬜ Not Started |
-
----
+The initial project does not provide automatic trading. Any future
+real-world financial deployment or automated trading capability would
+require separate review of applicable legal, regulatory, compliance,
+security, and risk requirements.
 
 ## License
 
 This project is licensed under the **MIT License**.
 
-See [`LICENSE`](LICENSE) for details.
+See `LICENSE` for details.
 
----
+------------------------------------------------------------------------
 
-## Nexora
-
-**Nexora — AI Stock Decision Support & Prediction Tool**
-
-> Analyze market information. Understand risk. Make informed decisions.
+**Nexora --- AI Stock Decision Support & Prediction Tool**
